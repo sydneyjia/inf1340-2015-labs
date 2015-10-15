@@ -9,7 +9,7 @@ __license__ = "MIT License"
 
 
 """
-Instructions: Add a function to to get input from the user and use that
+Instructions: Add a function to get input from the user and use that
 function in name_that_shape()
 
 The function should prompt the user for input until a legal value is
@@ -38,7 +38,7 @@ def name_that_shape():
 
     """
 
-    sides = int(raw_input("Number of sides:"))
+    sides = user_input()
 
     if sides == 3:
         print("triangle")
@@ -59,4 +59,11 @@ def name_that_shape():
     else:
         print("Error")
 
-# name_that_shape()
+def user_input():
+    sides = raw_input("number of sides: ")
+    while not (sides.isdigit() or (sides[0]=="-" and sides[1:].isdigit())):
+        sides =raw_input("wrong input, please enter again: ")
+    sides = int(sides)
+    return sides
+
+#name_that_shape()
