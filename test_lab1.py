@@ -8,26 +8,26 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 import mock
-from lab1_solution import vowel_or_consonant
+from test lab1 import vowel_or_consonant
 
 
-def test_vowel_or_consonant(capsys):
+def vowel_or_consonant():
 
-    vowels = list("aeiou")
-    for letter in vowels:
-        with mock.patch("__builtin__.raw_input", return_value=letter):
-            vowel_or_consonant()
-            (out, err) = capsys.readouterr()
-            assert out == "vowel\n"
+ vowel = list("aeiou")
 
-    with mock.patch("__builtin__.raw_input", return_value="y"):
-        vowel_or_consonant()
-        (out, err) = capsys.readouterr()
-        assert out == "sometimes a vowel, sometimes a consonant\n"
+letter = raw_input('Enter the letter you want:')
 
-    consonants = list("bcdfghjklmnpqrstvwxz")
-    for letter in consonants:
-        with mock.patch("__builtin__.raw_input", return_value=letter):
-            vowel_or_consonant()
-            (out, err) = capsys.readouterr()
-            assert out == "consonant\n"
+if letter == "a":
+    print('vowel')
+elif letter == "e":
+    print('vowel')
+elif letter == "i":
+    print('vowel')
+elif letter == "o":
+    print('vowel')
+elif letter == "u":
+    print('vowel')
+elif letter == "y":
+    print('sometimes a vowel, sometimes a consonant')
+else:
+    print('consonant')
