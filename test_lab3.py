@@ -56,6 +56,7 @@ def lower_case_28_0r_29():
 # Write a test function for unexpected input
 # Hint: use a try/except block to deal with the exception
 # Hint: use data types other than strings as input
+
 def unexpected_input():
     try:
         days_in_month("kjhuy")
